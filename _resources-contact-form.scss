@@ -1,0 +1,231 @@
+html {
+	overflow-x: hidden;
+}
+.page-template-resources-contact-form{
+	background: $cii-blue;
+}
+
+
+.wpcf7-form.invalid .wpcf7-response-output {
+	font-size: 12px;
+	border: 2px solid #fe5000 !important;
+	padding: 15px;
+	color: #ebfbfd;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1.38px;
+}
+.wpcf7 form.sent .wpcf7-response-output{
+	font-size: 12px !important;
+	font-weight: 700;
+	text-transform: uppercase !important;
+	letter-spacing: 1.38px;
+}
+.fa-spin {
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+span.wpcf7-not-valid-tip {
+	font-size: 1em;
+	display: block;
+	font-weight: 600;
+}
+.resource-contact-form {
+	background-color: $cii-blue;
+	.resource-form-header {
+		display: flex;
+		padding-top: 60px;
+		padding-bottom: 40px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: auto;
+   		width: 100%;
+
+		> h3 {
+			font-weight: 700 !important;
+			color: $cii-white !important;
+			margin-bottom: 0px;
+			font-size: 52px;
+			@include breakpoint(small down) {
+				font-size: 48px;
+				line-height: 40px;
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 0px !important;
+	}
+	.uacf7_repeater {
+		line-height: 0;
+		z-index: 9;
+		position: relative;
+	}
+
+	.uacf7_repeater_sub_field,
+	.uacf7_repeater_button_wraper {
+		position: relative;
+
+		input {
+			padding: 11px 46px 11px 16px;
+			margin-bottom: 20px !important;
+		}
+
+		button {
+			display: flex !important;
+			width: 30px;
+			height: 30px;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			font-size: 25px;
+			border-radius: 50%;
+			cursor: pointer;
+			position: absolute;
+			z-index: 99;
+			color: $cii-white;
+
+			&.uacf7_repeater_add {
+				background-color: $cii-yellow;
+				color: $cii-navy;
+				width: 40px;
+				height: 40px;
+			}
+
+			&.uacf7_repeater_remove {
+				right: 0px;
+				top: 0px;
+				height: 40px;
+				background-color: $cii-red;
+				border-radius: 0;
+			}
+		}
+
+		&:first-of-type {
+			.uacf7_repeater_remove {
+				display: none !important;
+			}
+
+			input {
+				padding: 11px 16px;
+			}
+		}
+	}
+
+	.uacf7_repeater_controls {
+		position: absolute;
+		display: flex !important;
+		justify-content: center;
+		bottom: 0px;
+		right: -60px;
+
+		.uacf7_repeater_button_wraper {
+			position: relative;
+
+			.uacf7_repeater_add {
+				position: relative;
+
+				&:disabled {
+					background-color: $cii-greynavy;
+					cursor: not-allowed;
+				}
+			}
+		}
+
+		@include breakpoint(small down) {
+			position: relative;
+			margin-bottom: 20px;
+			width: 100%;
+			bottom: unset;
+			right: unset;
+		}
+	}
+
+	.cii-form-container {
+		@include breakpoint(small down) {
+			max-width: 360px;
+			padding: 0px 20px;
+			margin-bottom: 100px;
+		}
+		button.button.cii-btn-primary.cii-submit{
+			margin-top: 15px;
+		}
+
+		input,
+		textarea {
+			margin-bottom: 4px;
+		}
+
+		background: #3366cc;
+		max-width: 440px;
+		width: 100%;
+		margin: 0px auto;
+		padding-bottom: 80px;
+
+		.cii-submit{
+			margin-top: 40px;
+    		padding: 15px 50px;
+		}
+	}
+
+	.selectric {
+		width: 100%;
+	}
+
+	.selectric-wrapper {
+		margin-bottom: 5px;
+	}
+
+	.post-password-form-container {
+		color: $cii-white;
+		max-width: 80%;
+		width: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: auto;
+
+		.wrong-password-message{
+			color: #721c24;
+			background-color: #f8d7da;
+			border-color: #f5c6cb;
+			position: relative;
+			padding: 0.75rem 1.25rem;
+			margin-bottom: 1rem;
+			border: 1px solid transparent;
+			border-radius: 0.25rem;
+		}
+
+		.form-info{
+			margin-bottom: 25px;
+			font-size: 16px;
+		}
+
+		form.post-password-form {
+			max-width: 360px;
+			margin: 100px auto;
+			width: 100%;
+			margin-top: 0px;
+
+			>p{
+				margin-bottom: 1rem !important;
+			}
+
+			label{
+				font-weight: 700;
+				color: $cii-white;
+				font-size: 12px;
+				margin: 16px 0 5px 0;
+				letter-spacing:1.38px;
+				
+			}
+
+			.cii-submit{
+				margin-top: 0px;
+				padding: 15px 50px;
+			}
+		}
+	}
+}
